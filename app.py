@@ -70,7 +70,7 @@ st.markdown("""
 # ─────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    df = pd.read_excel("/Users/saibesh/Desktop/Study Material/UM/NP/Nassau Candy Distributor.xlsx", sheet_name="Nassau Candy Distributor")
+    df = pd.read_excel("Nassau Candy Distributor.xlsx", sheet_name="Nassau Candy Distributor")
     df["Order Date"] = pd.to_datetime(df["Order Date"], errors="coerce")
     df["Ship Date"]  = pd.to_datetime(df["Ship Date"],  errors="coerce")
     df = df[df["Sales"] > 0].copy()
